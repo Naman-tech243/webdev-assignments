@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+
+        <H1> Form</H1>
+    </header>
+    <main>
+
+        <form action="/submit.php" method="post">
+            <label for="Firstname"> First Name</label>
+            <input type="text" id ="Firstname" placeholder="Enter First Nmae"> 
+            <br>
+            <label for="Lastname">Lastname </label>
+            <input type="text" id ="Lastname" placeholder="Enter Last Name">
+            <br>
+
+            <p> Select only One </p>
+            <label for="Male"> <input type ="radio" id="male" name="Gender"/>
+            Male 
+            </label>
+            <label for="Female"> <input type ="radio" id="Female" name="Gender"/>
+            Female 
+            </label>
+            <br>
+
+            <p> Favourite Subjects</p>
+            <label for="Maths"> <input type="checkbox" id="Maths" name="Maths" value="Maths"/> Maths </label>
+            <label for="English"><input type="checkbox" id="English" name="English" value="English"/> English </label>
+            <label for="Hindi"><input type="checkbox" id="Hindi" name="Hindi" value="Hindi"/> Hindi </label>
+            <label for="Science"><input type="checkbox" id="Science" name="Science" value="Science"/> Science </label>
+
+            <br>
+
+            <h2> Country</h2>
+            <select id="Country" name="Country">
+                <option> Select </option>
+                <option value="USA"> USA </option>
+                <option value="Canada">Canada</option>
+                <option value="Australia">Australia</option>
+                <option value="Nepal">Nepal</option>
+            </select>
+
+            <br>
+            <br>
+
+            <label for="About Me"> About Me: </label>
+            <br>
+            <textarea name="About Me" id="About Me" cols="20" rows="10"> Write your text here </textarea>
+            <br>
+
+            <button type="Submit"> Submit </button>
+
+        </form>
+        
+    </main>
+<footer>
+    <P>
+        footer
+    </P>
+
+</footer>
+</body>
+</html>
