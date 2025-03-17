@@ -1,19 +1,33 @@
- console.log(document.getElementById("username"),"Hey Naman");
+// Log the value of the username input instead of the DOM element
+console.log(document.getElementById("username").value, "Hey Naman");
 
-function handleLogin(e){
-    console.log("e");
+function handleLogin(e) {
+    console.log("Event triggered");
 
-    e.preventDefault() 
-    let username = document.getElementById("username").ariaValueMax;
+    // Prevent the form from submitting
+    e.preventDefault();
 
+    // Get the username input value
+    let username = document.getElementById("username").value;
 
-    console.log(username,"hey i am clickrd");
-if(usrrnamne)
-{
-   let  document. getElementsByClassName{"login-sectiobn"}[0].style;
-   console.log {document}
+    // Check if username is provided
+    if (username) {
+        // Hide the login section and display the user section
+        const loginSection = document.getElementsByClassName("login-section")[0];
+        const userSection = document.getElementsByClassName("user-section")[0];
+        
+        if (loginSection && userSection) {
+            loginSection.style.display = "none";
+            userSection.style.display = "block";
+            document.getElementById("user-name").textContent = username;
+        } else {
+            console.error("Login or user section not found.");
+        }
+    }
+
+    // Log the username to confirm it's captured
+    console.log(username, "Hey, I am clicked!");
 }
 
-
-}
-document.getElementById("login-form").addEventListener("submit", (e)=>handleLogin(e));
+// Add event listener to handle form submission
+document.getElementById("login-form").addEventListener("submit", handleLogin);
